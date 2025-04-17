@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deteksi Objek Real-Time</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Cek apakah pengguna sudah login
+    if (localStorage.getItem('isLoggedIn') !== 'true') {
+      window.location.href = 'login.html'; // Arahkan ke halaman login jika belum login
+    }
+  </script>
+</head>
+<body>
+  <div class="container glass">
+    <h1>🎯 Deteksi Objek Real-Time</h1>
+    <p class="desc">Gambar terbaru dari kamera akan muncul di bawah ini:</p>
+    
+    <!-- Container untuk menampilkan gambar -->
+    <div class="images-grid" id="imagesGrid">
+      <!-- Gambar-gambar akan ditambahkan di sini -->
+    </div>
+    
+    <p class="update-note">Gambar akan diperbarui setiap 3 detik secara otomatis.</p>
+  </div>
+
+  <!-- Notifikasi UI -->
+  <div id="notification" class="notification">
+    <span id="notificationMessage">
